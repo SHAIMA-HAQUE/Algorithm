@@ -10,7 +10,7 @@ def main():
 
 def locate_query(list,query):
     position = 0
-    while True:
+    while position < len(list):
         if list[position] == query:
             return position
         position += 1
