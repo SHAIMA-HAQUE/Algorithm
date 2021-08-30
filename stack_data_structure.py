@@ -14,12 +14,12 @@ class Stack:
             return self.items[-1]
 
 
-myStack = Stack()
-myStack.push("A")
-myStack.push("B")
-print(myStack.get_stack())
-myStack.push("C")
-print(myStack.get_stack())
-myStack.pop()
-print(myStack.get_stack())
-print(myStack.peek())
+# myStack = Stack()
+# myStack.push("A")
+# myStack.push("B")
+# print(myStack.get_stack())
+# myStack.push("C")
+# print(myStack.get_stack())
+# myStack.pop()
+# print(myStack.get_stack())
+# print(myStack.peek())
