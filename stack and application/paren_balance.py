@@ -42,4 +42,3 @@ print("String : [][]]] Balanced or not?")
 print(paren_balanced("[][]]]"))
 
 print("String : [][] Balanced or not?")
-print(paren_balanced("[][]"))
