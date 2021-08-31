@@ -35,7 +35,7 @@ class LinkedList:
             return
         new_node.next = prev_node.next
         prev_node.next = new_node
-    
+    #deleting node by value
     def delete_node(self,key):
         curr_node = self.head
         if curr_node and curr_node.data == key:
@@ -51,6 +51,29 @@ class LinkedList:
                 return
             prev_node.next = curr_node
             curr_node = None
+    
+    #deleting node by position
+    def delete_not_at_position(self,pos):
+        if self.head:
+            curr_node = self.head
+            if pos == 0:
+                self.head = curr_node.next
+                curr_node = None
+                return
+        prev_node = None
+        count = 0
+        while curr_node and count!=pos:
+            prev_node = curr_node
+            curr_node = curr_node.next
+            count += 1
+            
+            if curr_node == None:
+                return
+
+            prev_node.next = curr_node.next
+            curr_node = None
+
+            
 
 
 linked_list = LinkedList()
@@ -60,4 +83,5 @@ linked_list.append("B")
 linked_list.prepend("C")
 linked_list.append_after_node(linked_list.head.next,"Yoda")
 linked_list.delete_node("C")
+linked_list.delete_not_at_position(1)
 linked_list.print_list()
