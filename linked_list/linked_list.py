@@ -22,9 +22,16 @@ class LinkedList:
         while last_node.next:
             last_node = last_node.next
         last_node.next = new_node
+    
+    def prepend(self,data):
+        new_node = Node(data)
+        new_node.next = self.head
+        self.head = new_node
 
 
 linked_list = LinkedList()
 linked_list.append("A")
 linked_list.append("B")
+
+linked_list.prepend("C")
 linked_list.print_list()
