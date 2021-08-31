@@ -73,6 +73,19 @@ class LinkedList:
             prev_node.next = curr_node.next
             curr_node = None
 
+    def len_iterative(self):
+        curr_node = self.head
+        count = 0
+        while curr_node:
+            count += 1
+            curr_node = curr_node.next
+        return count
+    
+    def len_recursive(self,node):
+        if node is None:
+            return 0
+        return 1 + self.len_recursive(node.next)
+
             
 
 
@@ -85,3 +98,5 @@ linked_list.append_after_node(linked_list.head.next,"Yoda")
 linked_list.delete_node("C")
 linked_list.delete_not_at_position(1)
 linked_list.print_list()
+print(linked_list.len_iterative())
+print(linked_list.len_recursive(linked_list.head))
