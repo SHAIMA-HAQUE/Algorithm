@@ -114,7 +114,20 @@ class LinkedList:
             self.head = curr_node1
         
         curr_node1.next, curr_node2.next = curr_node2.next, curr_node1.next
+    
+    def reverse_iterative(self):
+        prev_node = None
+        curr_node = self.head
+        while curr_node:
+            next = curr_node.next
+            curr_node.next = prev_node
+            prev_node = curr_node
+            curr_node = next
+        self.head = prev_node
 
+
+
+# 
 
 llist = LinkedList()
 llist.append("A")
@@ -122,36 +135,6 @@ llist.append("B")
 llist.append("C")
 llist.append("D")
 
-print("Original List")
+llist.reverse_iterative()
+
 llist.print_list()
-
-
-llist.swap_node("B", "C")
-print("Swapping nodes B and C that are not head nodes")
-llist.print_list()
-
-llist.swap_node("A", "B")
-print("Swapping nodes A and B where key_1 is head node")
-llist.print_list()
-
-llist.swap_node("D", "B")
-print("Swapping nodes D and B where key_2 is head node")
-llist.print_list()
-
-llist.swap_node("C", "C")
-print("Swapping nodes C and C where both keys are same")
-llist.print_list()
-            
-
-
-linked_list = LinkedList()
-linked_list.append("A")
-linked_list.append("B")
-
-linked_list.prepend("C")
-linked_list.append_after_node(linked_list.head.next,"Yoda")
-linked_list.delete_node("C")
-linked_list.delete_not_at_position(1)
-linked_list.print_list()
-print(linked_list.len_iterative())
-print(linked_list.len_recursive(linked_list.head))
