@@ -85,7 +85,62 @@ class LinkedList:
         if node is None:
             return 0
         return 1 + self.len_recursive(node.next)
+    
+    def swap_node(self,key_1,key_2):
 
+        if key_1 == key_2:
+            return
+        prev_node1 = None
+        curr_node1 = self.head
+        while curr_node1 and curr_node1.data != key_1:
+            prev_node1 = curr_node1
+            curr_node1 = curr_node1.next
+        prev_node2 = None
+        curr_node2 = self.head
+        while curr_node2 and curr_node2.data != key_2:
+            prev_node2 = curr_node2
+            curr_node2 = curr_node2.next
+        
+        if not curr_node1 and not curr_node2:
+            return
+        if prev_node1 :
+            prev_node1.next = curr_node2
+        else:
+            self.head = curr_node2
+        
+        if prev_node2:
+            prev_node2.next = curr_node1
+        else:
+            self.head = curr_node1
+        
+        curr_node1.next, curr_node2.next = curr_node2.next, curr_node1.next
+
+
+llist = LinkedList()
+llist.append("A")
+llist.append("B")
+llist.append("C")
+llist.append("D")
+
+print("Original List")
+llist.print_list()
+
+
+llist.swap_node("B", "C")
+print("Swapping nodes B and C that are not head nodes")
+llist.print_list()
+
+llist.swap_node("A", "B")
+print("Swapping nodes A and B where key_1 is head node")
+llist.print_list()
+
+llist.swap_node("D", "B")
+print("Swapping nodes D and B where key_2 is head node")
+llist.print_list()
+
+llist.swap_node("C", "C")
+print("Swapping nodes C and C where both keys are same")
+llist.print_list()
             
 
 
