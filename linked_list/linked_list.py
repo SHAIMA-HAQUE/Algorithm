@@ -185,13 +185,25 @@ class LinkedList:
                 prev_node = curr_node
             curr_node = prev_node.next
 
+    def nth_to_last(self,n):
+        total_len = self.len_iterative()
+
+        curr_node = self.head
+        while curr_node:
+            if total_len == n:
+                print(curr_node.data)
+                return curr_node.data
+            total_len-=1
+            curr_node = curr_node.next
+        if curr_node is None:
+            return
 
 
-# llist = LinkedList()
-# llist.append("A")
-# llist.append("B")
-# llist.append("C")
-# llist.append("D")
+llist = LinkedList()
+llist.append("A")
+llist.append("B")
+llist.append("C")
+llist.append("D")
 
 # llist.reverse_iterative()
 
@@ -215,17 +227,19 @@ class LinkedList:
 # llist_1.merge(llist_2)
 # llist_1.print_list()
 
-llist = LinkedList()
-llist.append(1)
-llist.append(6)
-llist.append(1)
-llist.append(4)
-llist.append(2)
-llist.append(2)
-llist.append(4)
+# llist = LinkedList()
+# llist.append(1)
+# llist.append(6)
+# llist.append(1)
+# llist.append(4)
+# llist.append(2)
+# llist.append(2)
+# llist.append(4)
 
-print("Original Linked List")
-llist.print_list()
-print("Linked List After Removing Duplicates")
-llist.remove_duplicates()
-llist.print_list()
+# print("Original Linked List")
+# llist.print_list()
+# print("Linked List After Removing Duplicates")
+# llist.remove_duplicates()
+# llist.print_list()
+
+print(llist.nth_to_last(4))
