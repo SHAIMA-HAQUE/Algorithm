@@ -15,5 +15,10 @@
 [Stack](https://github.com/SHAIMA-HAQUE/Python-DSA/tree/main/stack%20and%20application)
 
 ### Dynamic Programming
-[Memoization-Fibonacci]()
+[Memoization](https://github.com/SHAIMA-HAQUE/Algorithm/blob/main/algorithms/memoization-fibonacci.py)
+
+[Cp-Algorithms](https://cp-algorithms.com/algebra/binary-exp.html)
+### Binary Exponentiation
+- [C - Code](https://github.com/SHAIMA-HAQUE/Algorithm/blob/main/algorithms/bin_expo.c)
+
 *This repo will be updated with more data structures and algorithms.*
