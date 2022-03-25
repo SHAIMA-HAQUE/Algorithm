@@ -16,7 +16,7 @@
 
 ### Dynamic Programming
 [Memoization](https://github.com/SHAIMA-HAQUE/Algorithm/blob/main/algorithms/memoization-fibonacci.py)
-[Fibinacci by DP]()
+[Fibinacci by DP](https://github.com/SHAIMA-HAQUE/Algorithm/blob/main/algorithms/fibonacci_dp.py)
 ### [Cp-Algorithms](https://cp-algorithms.com/algebra/binary-exp.html)
 ### Binary Exponentiation
 - [C - Code](https://github.com/SHAIMA-HAQUE/Algorithm/blob/main/algorithms/bin_expo.c)
